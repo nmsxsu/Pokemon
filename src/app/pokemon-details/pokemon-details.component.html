@@ -1,0 +1,43 @@
+<div
+  *ngIf="!loading"
+  class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded bg-body-tertiary mt-2 border border-end-0 border-danger border-3 rounded-start"
+>
+  <div class="row">
+    <div class="col-6">
+      <img
+        class="border-5"
+        src="{{ pokemon?.sprites?.other?.home?.front_default }}"
+      />
+    </div>
+    <div class="col-6">
+      <h2 class="card-title">{{ pokemon?.species?.name | titlecase }}</h2>
+      <p class="card-text">Type: {{ (pokemon?.types)![0].type.name }}</p>
+      <p class="card-text">Peso: {{ pokemon?.weight }}</p>
+      <table
+        class="table table-striped table-bordered table-danger border-danger w-100"
+      >
+        <thead>
+          <tr class="table-light">
+            <th scope="col">#</th>
+            <th scope="col titolo" style="font-style: oblique">
+              <h3>Moves</h3>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of pokemon?.abilities; let i = index">
+            <th scope="row">{{ i }}</th>
+            <th scope="row ">{{ p.ability.name }}</th>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div *ngIf="loading" class="spinner-grow" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
