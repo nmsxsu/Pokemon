@@ -10,12 +10,13 @@
         <img id="imgShiny"
         class="border-5"
         src="{{pokemon?.sprites?.other?.home?.front_shiny}}"/>
+    </div>
+    <div class="col-6">
+      <h2 class="card-title">{{ pokemon?.species?.name | titlecase }}
         <img id="imgfront2"
         class="border-5"
         src="{{pokemon?.sprites?.versions?.['generation-iii']?.emerald?.front_default}}"/>
-    </div>
-    <div class="col-6">
-      <h2 class="card-title">{{ pokemon?.species?.name | titlecase }}</h2>
+      </h2>
       <p class="card-text">Type: {{ (pokemon?.types)![0].type.name |titlecase}}</p>
       <p class="card-text">Peso: {{ pokemon?.weight }}</p>
       <table
