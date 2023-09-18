@@ -32,14 +32,14 @@
       [maxSize]="5"
       [rotate]="true"
       [boundaryLinks]="true"
-      (pageChange)="pageChange()"
+      (pageChange)="getElenco()"
     ></ngb-pagination>
 
     <select
       class="form-select"
       style="width: auto"
       [(ngModel)]="pageSize"
-      (ngModelChange)="pageChange()"
+      (ngModelChange)="getElenco()"
     >
       <option [ngValue]="8">8 pokemon per Pagina</option>
       <option [ngValue]="15">15 pokemon per Pagina</option>

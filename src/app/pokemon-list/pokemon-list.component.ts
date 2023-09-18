@@ -46,9 +46,6 @@ export class PokemonListComponent {
     );
   }
 
-  pageChange() {
-    this.getElenco();
-  }
   show(nome: string) {
     this.router.navigate(['pokemonDetails', nome]);
   }
