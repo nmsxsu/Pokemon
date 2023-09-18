@@ -26,9 +26,8 @@
         </thead>
         <tbody>
           <tr *ngFor="let p of pokemon?.abilities; let i = index">
-            <th scope="row">{{ i }}</th>
-            <th scope="row ">{{ p.ability.name }}</th>
-            <td></td>
+            <th scope="row">{{ i + 1 }}</th>
+            <th scope="row ">{{ p.ability.name | titlecase }}</th>
           </tr>
         </tbody>
       </table>
